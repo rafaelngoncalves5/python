@@ -5,7 +5,7 @@ Python foi criada por Guido van Rossum e lançada em 20 de fevereiro de 1991.
 '''
 # Aula 1
 
-# Estou usando -> Python 3.10 e as extensões do VSCode: Python Extension Pack e Python;
+# Estou usando -> Python 3.10 e as extensões do Python VSCode;
 
 # O print do Python 3 tem parênteses
 
