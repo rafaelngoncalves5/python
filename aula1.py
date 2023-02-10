@@ -28,6 +28,9 @@ odd_number = 15 % 2     # Retorna 1
 # Exemplo de multiplicação
 product = 2 * 2
 
+# Exemplo de potenciação
+power = 2 ** 2      # Mesmo que 2²
+
 # Divisão
 remainder = 1398 % 11
 
