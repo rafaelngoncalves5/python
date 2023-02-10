@@ -1,0 +1,25 @@
+Ambientes virtuais são uma forma de mantermos de forma organizada e separada, 
+nossas dependências requeridas;
+
+Obs: Python -V para verificar versão do Python;
+
+Podemos criar um ambiente virtual da seguinte forma:
+    1 - Acessa seu diretório com código fonte onde deseja instalar o ambiente;
+    2 - Dentro do folder, acessa a pasta onde temos nosso interpretador Python 3;
+    3 - Executa dentro da pasta do python.exe o comando -> -m venv nomeVenvEnv; 
+    3.1 - Exemplo no CMD -> C:\Users\meunome\Python\app.py>C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.10 -m venv nomeVenvEnv;
+    4 - Ativando o Ambiente virtual (tem de estar dentro do folder raiz) -> nomeVenvEnv\Scripts\activate.bat
+
+
+Os ambientes virtuais possuem uma cópia do pip, do interpretador Python e etc;
+
+Devemos SEMPRE manter um requirements.txt com o nome e possivelmente versão das dependências
+que estamos usando no nosso ambiente virtual. Por exemplo:
+- Dentro do requirements.txt
+    _________________
+    |flask==1.0.0   |
+    |requests       |
+    |gunicorn       |
+    |_______________|
+
+Para instalar essas dependências você pode ativar seu ambiente virtual e -> pip install -r requirements.txt;
