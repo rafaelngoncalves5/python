@@ -16,18 +16,11 @@ for k in my_dict:
 # Obs -> Se você tiver listas com chaves iguais, você pode iterar nas duas através de um mesmo loop
 # Obs -> Itera com my_dict[i] no caso de dicionário e i apenas em caso de lista
 
-shopping_list = ["banana", "orange", "apple"]
+# Iterando com o range
+lst = ["a", "b", "c"]
 
-stock = {
-  "banana": 6,
-  "apple": 0,
-  "orange": 32,
-  "pear": 15
-}
-    
-prices = {
-  "banana": 4,
-  "apple": 2,
-  "orange": 1.5,
-  "pear": 3
-}
+for i in range(0, len(lst)):
+    print(lst[i])
+
+for j in lst:
+    print(lst)
