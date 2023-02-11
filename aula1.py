@@ -35,7 +35,7 @@ power = 2 ** 2      # Mesmo que 2²
 # Divisão
 remainder = 1398 % 11
 
-# Operadores de incremento e decremento
+# Operadores += e -=
 fish_pond = 30
 # Peguei 12 peixes!
 fish_pond += 12     # Mesmo que -> fish_pond = fish_pond + 12
