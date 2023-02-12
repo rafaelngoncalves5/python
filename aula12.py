@@ -57,3 +57,5 @@ def sum(num1, num2):
 
 print(sum_lambda(2, 2))
 print(sum(2, 2))
+
+# Obs, você pode manipular bits, com os bitwise operators no Python. Revise o assunto caso precise
