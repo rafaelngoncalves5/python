@@ -11,7 +11,7 @@ class Animal(object):
 
 # Atributos
 class Animal(object):
-    is_alive = True
+    is_alive = True     # Member variable
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -53,3 +53,18 @@ class Dog(Animal):
     
 dg = Dog("PP", 90)
 dg.call_parent()
+
+# O método __repr__() é diminutivo de representation, ele é útil para dizer a classe
+# como representar seus objetos
+# Exemplo do __repr__()
+class Point3D(object):
+  def __init__(self, x, y, z):
+    self.x = x
+    self.y = y
+    self.z = z
+  def __repr__(self):
+    return "(%d, %d, %d)" %(self.x, self.y, self.z)
+
+my_point = Point3D(1, 2, 3)
+print(my_point)
+
