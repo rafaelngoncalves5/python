@@ -2,7 +2,7 @@
 Python é uma linguagem de uso de geral, de tipagem dinâmica e forte e que 
 possui coletor de lixo.
 Python foi criada por Guido van Rossum e lançada em 20 de fevereiro de 1991.
-
+Os objetos de Python são de primeira classe.
 '''
 # Aula 1
 
