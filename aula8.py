@@ -58,3 +58,7 @@ for i in my_dict:
 #   - Forma 2
 for k, v in my_dict.items():
     print("Key -> {}, Value -> {}".format(k, v))
+
+# Outro exemplo iterando em dicionários
+for i in my_dict:
+    print("{}: {}".format(i, my_dict[i]))
