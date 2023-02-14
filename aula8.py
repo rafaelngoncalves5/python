@@ -5,7 +5,7 @@ for value in [1, 2, 3, 4, 5]:
     print(value)
 
 # Você pode usar o for loop para iterar em chaves em dicionários
-my_dict = {"Chave 1": 1}
+my_dict = {1: "Item 1", 2: "Item 2", 3: "Item 3"}
 
 for k in my_dict:
     # Isso aqui printa cada um dos elementos par chave/valor
@@ -24,3 +24,37 @@ for i in range(0, len(lst)):
 
 for j in lst:
     print(lst)
+
+print("---")
+
+# Iterando em Keys, Values e Items
+
+# Em keys temos duas formas
+#   - Forma 1
+for k in my_dict:
+    print(k)
+
+#   - Forma 2
+for i in my_dict.keys():
+    print(i)
+
+# Em values temos duas formas
+#   - Forma 1
+for v in my_dict:
+    print(my_dict[v])
+
+#   - Forma 2
+for v in my_dict.values():
+    print(v)
+
+print("---")
+
+# Items temos duas formas
+
+#   - Forma 1
+for i in my_dict:
+    print("Key -> %s, Value -> %s" %(i, my_dict[i]))
+
+#   - Forma 2
+for k, v in my_dict.items():
+    print("Key -> {}, Value -> {}".format(k, v))
