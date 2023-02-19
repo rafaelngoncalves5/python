@@ -50,7 +50,7 @@ float1 = 5.6
 # Você pode definir um número de ponto flutuante ou inteiro usando notação científica
 float2 = 5.1e2  # E indica elevado a dez, ou seja: 5.1e2 -> Mesmo que 5.1 elevado a 10
 
-# Para operar resultados float sem arrendodar para baixo: Segue os exemplos
+# Para operar resultados float sem arrendodar para baixo: segue os exemplos
 quotient1 = 5.1/5
 quotient2 = 5/4.9
 quotient3 = 10./5.

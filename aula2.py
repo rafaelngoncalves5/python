@@ -20,7 +20,7 @@ print(python[5])
 3 - upper() -> Transforma à string em maiúsculo
 4 - str() -> Converte em string
 '''
-# Obs: Métodos que usam . apenas funcionam com string, já os outros, funcionam com demais tipos
+# Obs: métodos que usam . apenas funcionam com string, já os outros, funcionam com demais tipos
 
 # Concatenando string com variáveis usando %
 month = 10
