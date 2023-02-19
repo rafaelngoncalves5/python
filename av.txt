@@ -4,11 +4,11 @@ nossas dependências requeridas;
 Obs: Python -V para verificar versão do Python;
 
 Podemos criar um ambiente virtual da seguinte forma:
-    1 - Acessa seu diretório com código fonte onde deseja instalar o ambiente;
-    2 - Dentro do folder, acessa a pasta onde temos nosso interpretador Python 3;
-    3 - Executa dentro da pasta do python.exe o comando -> -m venv nomeVenvEnv; 
-    3.1 - Exemplo no CMD -> C:\Users\meunome\Python\app.py>C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.10 -m venv nomeVenvEnv;
-    4 - Ativando o Ambiente virtual (tem de estar dentro do folder raiz) -> nomeVenvEnv\Scripts\activate.bat
+    1 - python -m venv venv-name;
+    2 - .\env\Scripts\Activate.ps1
+
+   2.1 - No cmd é Activate.bat
+   2.2 - Em caso de erro de restrição vá no powershell e -> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 
 
 Os ambientes virtuais possuem uma cópia do pip, do interpretador Python e etc;
