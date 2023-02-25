@@ -10,7 +10,6 @@ Podemos criar um ambiente virtual da seguinte forma:
    2.1 - No cmd é Activate.bat
    2.2 - Em caso de erro de restrição vá no powershell e -> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 
-
 Os ambientes virtuais possuem uma cópia do pip, do interpretador Python e etc;
 
 Devemos SEMPRE manter um requirements.txt com o nome e possivelmente versão das dependências
