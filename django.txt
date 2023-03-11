@@ -908,4 +908,67 @@ Template:
     </div>
     <button type="submit" class="submit-btn waves-effect waves-light btn-large">Buscar</button>
 </form>
+---
+Explicando de forma longa e detalhada sistema de requisição e resposta de uma suposta API REST usando o Django
 
+1 - Considere o protocolo HTTP (HyperText Transfer Protocol):
+
+=== REQUISIÇÃO ===
+
+Linha de requisição -> Informa o método da requisição, o recurso e a versão do HTTP
+__________________________________
+| método | recurso | versão HTTP |   -> POST /app/processamento HTTP/1.1
+----------------------------------
+
+Linha de cabeçalho -> Inclui informações complementares sobre a requisição (campo e valor)
+_____________________
+| cabeçalho | valor |      -> User-Agent: Mozilla/4.0 (compatible...)
+---------------------      -> HOST: www.hosturl.com
+         ...               -> User-Agent: Mozilla/4.0 (compatible...)
+_____________________      -> Content-Type: text/xml; charset=utf-8
+| cabeçalho | valor |      -> Content-Length: 88
+---------------------      -> Accept-Language: en-us
+                           -> Connection: Keep-Alive      
+
+Corpo da entidade -> Carrega dados passados pelo usuário, tais como: dados de formulários, arquivos de upload, etc (normalmente um JSON)
+________________
+|              |    -> <?xml version="1.0" encoding="utf-8"><string>Olá mundo!<string>
+|              |  
+----------------
+
+=== RESPOSTA ===
+
+Linha de resposta -> Informa a versão do HTTP, o código de retorno (status) e uma mensagem explicativa
+__________________________________________
+| versão HTTP | code status | msg status |   -> HTTP/1.1 200 OK
+------------------------------------------
+
+Linha de cabeçalho -> Inclui informações complementares sobre a requisição (campo e valor)
+_____________________
+| cabeçalho | valor |      -> User-Agent: Mozilla/4.0 (compatible...)
+---------------------      -> HOST: www.hosturl.com
+         ...               -> User-Agent: Mozilla/4.0 (compatible...)
+_____________________      -> Content-Type: text/xml; charset=utf-8
+| cabeçalho | valor |      -> Content-Length: 88
+---------------------      -> Accept-Language: en-us
+                           -> Connection: Keep-Alive      
+
+Corpo da entidade -> Traz o recurso solicitado pelo cliente ou dados de resposta da requisição feita
+________________
+|              |    -> <?xml version="1.0" encoding="utf-8"><string>Respondendo a requisição<string>
+|              |  
+----------------
+
+2 - Considere uma representação de uma API REST (REpresentational State Transfer):
+____________________________________________________________________
+| Website/Web App | Mobile | User, Client, Supplier API | IOT, etc |
+--------------------------------------------------------------------
+       |              |                      |               |
+       v              v                      v               v
+______________________________________________________________________
+|                           REST API                                 |
+|                     Data Layer Access Service                      |
+----------------------------------------------------------------------
+                                 |
+                                 v
+                  Services, Cloud Interface, Database
