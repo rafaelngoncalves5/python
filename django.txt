@@ -979,3 +979,14 @@ Um cliente requere um elemento usando uma requisição HTTP, para algum lugar (A
 especificado na linha de cabeçalho da requisição HTTP, utilizando alguma notação para 
 passagem de informação, feita pelo corpo da requisição que responderá com uma resposta 
 HTTP com o conteúdo requerido no corpo da requisição ou com uma resposta adequada. 
+---
+Exemplo de encadeamento de QuerySet
+
+>>> Entry.objects.filter(
+...     headline__startswith='What'
+... ).exclude(
+...     pub_date__gte=datetime.date.today()
+... ).filter(
+...     pub_date__gte=datetime.date(2005, 1, 30)
+... )
+---
