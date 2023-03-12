@@ -990,3 +990,29 @@ Exemplo de encadeamento de QuerySet
 ...     pub_date__gte=datetime.date(2005, 1, 30)
 ... )
 ---
+Essa página da documentação sintetiza requisições e respostas no Django. Achei muito massa:
+
+https://docs.djangoproject.com/en/4.1/ref/request-response/
+---
+O reverse() do django.urls faz algo idêntico a tag de template 'url'.
+
+# Exemplo
+return HttpResponseRedirect(reverse('arch-summary', args=[1945]))
+
+# Ou, usando kwargs ao invés de args
+
+reverse('servicosapp:app_list', kwargs={'app_label': 'auth'})
+---
+Como o Django processa uma requisição
+
+1 - Django determina a o módulo URLconf na raiz a ser usado
+2 - Django carrega esse módulo e busca pelo arquivo de urls dele
+3 - Django itera em cada um dos paths no urls e encontra aquele que bate com a URL requerida
+4 - Django importa e chama a view encarregada pela URL. A view recebe os seguintes argumentos
+         - Uma instância do HttpRequest
+         - Se a URL requerida não conter grupos nomeados daí os matches da expressão regular são passadas como argumento
+         - Os kwargs são feitos de quaisquer partes nomeadas que batem com as expressões passadas no path
+5 - Caso nenhuma URL bata, ou se ocorrer alguma excessão em qualquer ponto do processo, o Django chama a URL adequada
+
+https://docs.djangoproject.com/en/4.1/topics/http/urls/#how-django-processes-a-request
+---
